@@ -50,6 +50,7 @@
     <solr-smoke.version>${project.version}</solr-smoke.version>
     <hcatalog-smoke.version>${project.version}</hcatalog-smoke.version>
     <phoenix-smoke.version>${project.version}</phoenix-smoke.version>
+    <hive-unittest.version>${project.version}</hive-unittest.version>
   </properties>
 
   <!--
@@ -72,6 +73,7 @@
     -->
     <module>hcatalog</module>
     <module>phoenix</module>
+      <module>hive</module>
   </modules>
 
   <dependencyManagement>
@@ -161,6 +163,12 @@
         <version>${httpfs-smoke.version}</version>
         <scope>test</scope>
       </dependency>
+        <dependency>
+            <groupId>org.apache.bigtop.itest</groupId>
+            <artifactId>hive-unittest</artifactId>
+            <version>${hive-unittest.version}</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
   </dependencyManagement>
 
