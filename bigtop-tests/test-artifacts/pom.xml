@@ -51,6 +51,7 @@
     <module>spark</module>
     <module>phoenix</module>
     <module>fatjar</module>
+    <module>hive</module>
   </modules>
 
   <dependencies>
