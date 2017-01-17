@@ -28,42 +28,22 @@
     </parent>
 
     <groupId>org.apache.bigtop.itest</groupId>
-    <artifactId>hadoop-smoke-execution</artifactId>
+    <artifactId>hive-unittest-execution</artifactId>
     <version>1.1.0</version>
-    <name>Hadoop smoke test execution</name>
+    <name>Hive Unit test execution</name>
 
     <properties>
         <org.apache.maven-dependency-plugin.groupId>org.apache.bigtop.itest</org.apache.maven-dependency-plugin.groupId>
-        <org.apache.maven-dependency-plugin.artifactId>hadoop-smoke</org.apache.maven-dependency-plugin.artifactId>
-        <org.apache.maven-dependency-plugin.version>${hadoop-smoke.version}</org.apache.maven-dependency-plugin.version>
+        <org.apache.maven-dependency-plugin.artifactId>hive-unittest</org.apache.maven-dependency-plugin.artifactId>
+        <org.apache.maven-dependency-plugin.version>${hive-unittest.version}</org.apache.maven-dependency-plugin.version>
         <org.apache.maven-dependency-plugin.output>${project.build.directory}</org.apache.maven-dependency-plugin.output>
-        <org.apache.maven-dependency-plugin.pattern>**/*</org.apache.maven-dependency-plugin.pattern>
         <org.apache.maven-dependency-plugin.type>jar</org.apache.maven-dependency-plugin.type>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.cxf</groupId>
-            <artifactId>cxf-rt-frontend-jaxrs</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.hadoop</groupId>
-            <artifactId>hadoop-common</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.hadoop</groupId>
-            <artifactId>hadoop-hdfs</artifactId>
-        </dependency>
-        <!-- explicit dependency is needed to pull down transient deps. such as hadoop-examples -->
-        <dependency>
-            <groupId>${org.apache.maven-dependency-plugin.groupId}</groupId>
-            <artifactId>${org.apache.maven-dependency-plugin.artifactId}</artifactId>
-            <version>${hadoop-smoke.version}</version>
+            <groupId>org.apache.bigtop.itest</groupId>
+            <artifactId>hive-unittest</artifactId>
         </dependency>
     </dependencies>
 
