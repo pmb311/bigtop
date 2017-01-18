@@ -17,7 +17,7 @@ public class TestHive {
     @AfterClass
     public static void tearDown() {
         // deletion of test table
-        sh.exec("hive -e \"DESCRIBE bigtop_test\"");
+        sh.exec("hive -e \"DESCRIBE bigtop_test\"").dumpOutput();
         if (sh.getRet() == 0) {
             sh.exec("hive -e \"DROP TABLE bigtop_test\"");
             assertTrue("Drop table statement failed",
