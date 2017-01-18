@@ -130,8 +130,8 @@ class Shell {
    * stdout is logged at info; stderr at error.
    */
   void dumpOutput() {
-    LOG.error(toString())
-    LOG.error("return code = ${signCorrectedReturnCode()}")
+    LOG.info(toString())
+    LOG.info("return code = ${signCorrectedReturnCode()}")
     if (out.size() != 0) {
       LOG.info("\n<stdout>\n${out.join('\n')}\n</stdout>");
     }
