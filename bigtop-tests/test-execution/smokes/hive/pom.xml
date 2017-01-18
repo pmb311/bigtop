@@ -27,7 +27,6 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <groupId>org.apache.bigtop.itest</groupId>
     <artifactId>hive-unittest-execution</artifactId>
     <version>1.1.0</version>
     <name>Hive Unit test execution</name>
@@ -38,6 +37,7 @@
         <org.apache.maven-dependency-plugin.version>${hive-unittest.version}</org.apache.maven-dependency-plugin.version>
         <org.apache.maven-dependency-plugin.output>${project.build.directory}</org.apache.maven-dependency-plugin.output>
         <org.apache.maven-dependency-plugin.type>jar</org.apache.maven-dependency-plugin.type>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
