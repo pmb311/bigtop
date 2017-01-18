@@ -32,6 +32,10 @@
   <name>bigtop-smokes</name>
 
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
   <modules>
     <module>hadoop</module>
     <module>package</module>
